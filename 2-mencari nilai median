@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+float Median(float max, float min)
+{		
+	float med=(min+max)/2;
+	cout<<"Nilai Median= "<<med<<endl;
+	
+	return med;
+}
+
+void main()
+{
+	int n;
+	float med, min, max, bil;
+
+	cout<<"berapa jumlah bilangan yang di input? ";
+	cin>>n;
+	cout<<endl;
+	cout<<"bilangan ke-1 = ";
+	cin>>bil;
+	max=bil;
+	min=bil;
+
+	for (int i=1;i<n;i++)
+	{
+		cout<<"bilangan ke-"<<i+1<<" = ";
+		cin>>bil;
+		
+		if (bil>max)
+		{
+			max=bil;
+		}
+		if (bil<min)
+		{
+			min=bil;
+		}
+	}
+	
+	cout<<"Nilai Max= "<<max<<endl;
+	cout<<"Nilai Min= "<<min<<endl;
+	
+	Median(max, min);
+
+}
